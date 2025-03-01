@@ -1,0 +1,83 @@
+/*template*/
+
+.rp-cont{
+    display: flex;
+    margin-right: 30px;
+    border-top-right-radius: 25px;
+    border-top: 1px solid #5c5c5c83;
+    border-right: 1px solid #5c5c5c83;
+}
+.cont-c1{
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+}
+.c1{
+    max-width: 400px;
+    width: 100%;
+}
+.c2{
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.cont-c2{
+    padding: 40px 20px 40px 40px;
+    max-width: 400px;
+    width: 100%;
+}
+.cont-c3{
+    padding: 40px 40px 40px 20px;
+    max-width: 200px;
+    width: 100%;
+}
+.pr-p{
+    font-family: "Yusei Magic", serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+    margin-top: 25px;
+}
+.line{
+    height: 1px;
+    width: auto;
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(30, 30, 30, 0.641);
+}
+.line-p{
+    height: 3px;
+    width: 10%;
+    background-color: #4d63da;
+}
+#previewPhone,#previewEmail,#previewAddress,
+#previewSummary,#previewSkills,#previewAchievements,
+#previewEducation,#previewExperience,#previewProjects,
+#previewLinkdin{
+    font-size: 12px;
+    font-family: monospace;
+    line-break: anywhere;
+    clear: both;
+    color: #2d2c2c;
+}
+hr.line2{
+    border: 0.1px solid rgba(54, 54, 54, 0.378);
+    width: auto;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+#previewName{
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+#previewBio{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(30, 30, 30);
+}

@@ -1,0 +1,84 @@
+/*template*/
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=Yusei+Magic&display=swap');
+
+.rp-cont{
+    display: flex;
+}
+
+.cont-c1{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    padding: 20px 31px 8px 31px;
+    background-color: antiquewhite;
+}
+
+.cont11{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+    width: 100%;
+}
+.cont12{
+    padding: 0 0 20px 0;
+    max-width: 350px;
+    width: 100%;
+}
+
+
+.cont-c2{
+    margin-bottom: 20px;
+    padding: 0 32px 40px 32px;
+    max-width: 250px;
+    width: 100%;
+}
+.cont-c3{
+    padding: 0 31px 40px 31px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.pr-p{
+    font-family: "Dosis", serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    color: rgb(22, 49, 55);
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.line{
+    height: 1px;
+    width: auto;
+    margin: px 0;
+    background-color: rgba(22, 49, 55, 0.575);
+}
+
+#previewPhone,#previewEmail,#previewAddress,
+#previewSummary,#previewSkills,#previewAchievements,
+#previewEducation,#previewExperience,#previewProjects,
+#previewLinkdin{
+    font-size: 12px;
+    font-family: monospace;
+    line-break: anywhere;
+    clear: both;
+    color: #2d2c2c;
+}
+
+
+#previewName{
+    font-size: 22px;
+    font-family: "Exo 2", serif;   
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(22, 49, 55);
+}
+#previewBio{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: rgb(22, 49, 55);
+}

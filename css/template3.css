@@ -1,0 +1,105 @@
+/*template*/
+
+.rp-cont{
+    display: flex;
+}
+.cont-c1{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.c1{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+.c2{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 0;
+}
+.c3{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.c4{
+    max-width: 600px;
+    width: 100%;
+    padding: 10px 50px 0 50px;
+}
+.cont-c2{
+    padding: 20px 20px 40px 40px;
+    max-width: 200px;
+    width: 100%;
+}
+.cont-c3{
+    padding: 20px 40px 40px 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.pr-p{
+    font-family: "Yusei Magic", serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.line{
+    height: 1px;
+    width: 24%;
+    background-color: rgba(30, 30, 30, 0.641);
+}
+.H-line{
+    height: 30px;
+    width: 1px;
+    background-color: rgba(30, 30, 30, 0.641);
+}
+.crcl,.crcl2{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: rgb(194, 12, 9);
+}
+.crcl2{
+    background-color: rgb(197, 197, 9);
+}
+
+#previewPhone,#previewEmail,#previewAddress,
+#previewSummary,#previewSkills,#previewAchievements,
+#previewEducation,#previewExperience,#previewProjects,
+#previewLinkdin,.editor-pL{
+    font-size: 12px;
+    font-family: monospace;
+    line-break: anywhere;
+    clear: both;
+    color: #2d2c2c;
+}
+
+#previewLinkdin{
+    color: #a5a5a5;
+}
+
+
+#previewName{
+    font-size: 22px;
+    font-family: "Playfair Display", serif;    
+    font-weight: 400;
+    font-style: normal;
+    color: #bebdbd;
+}
+#previewBio{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #a5a5a5;
+}
