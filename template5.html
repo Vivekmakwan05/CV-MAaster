@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 5</title>
+    <link rel="stylesheet" href="css/template1.css">
+    <link rel="stylesheet" href="css/template5.css">
+    <link rel="stylesheet" href="css/mockinterview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="module" src="js/firebaseTemplate.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="template1.html">
+                <h1>Rezel <span style="color: #4d63da;">Builds</span></h1>
+            </a>
+        </div>
+    </header>
+
+    <section class="Form-cont">
+        <div class="Form-cont1">
+            <div class="container">
+                <form id="multiStepForm">
+                    <div class="F-Step active">
+                        <h2>About Section</h2>
+                        <div class="about-cont">
+                            <div class="inp-cont">
+                                <div class="abcont">
+                                    <div class="row">
+                                        <input type="text" id="Firstname" name="Firstname" onkeyup="BuildResume()"
+                                            placeholder="First Name" required>
+                                        <input type="text" id="Bio" name="Bio" onkeyup="BuildResume()"
+                                            placeholder="Bio (Title)">
+                                        <input type="email" id="email" name="email" onkeyup="BuildResume()"
+                                            placeholder="Email">
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" id="Lastname" name="Lastname" onkeyup="BuildResume()"
+                                            placeholder="Last Name">
+                                        <input type="number" id="phone" name="phone" onkeyup="BuildResume()"
+                                            placeholder="Phone No">
+                                        <input type="text" id="Addr" name="Addr" onkeyup="BuildResume()"
+                                            placeholder="Address">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="text" id="Linkdin" name="Linkdin" onkeyup="BuildResume()" placeholder="Linkdin Account Link">
+                                    <textarea rows="3" cols="5" id="Sumry" name="Sumry" onkeyup="BuildResume()"
+                                        placeholder="Enter Summary"></textarea>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="R-Button">Refresh</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Skills Section</h2>
+                        <div class="skill-cont">
+                            <div class="sinp-cont">
+
+                                <div class="cont">
+                                    <div class="scont" id="skill-section">
+                                        <div class="rows">
+                                            <input type="text" id="Skill1" name="Skill1" onkeyup="BuildResume()"
+                                                placeholder="Skill-1">
+                                            <input type="text" id="Skill2" name="Skill2" onkeyup="BuildResume()"
+                                                placeholder="Skill-2">
+                                        </div>
+                                        <div class="rows">
+                                            <input type="text" id="Skill3" name="Skill3" onkeyup="BuildResume()"
+                                                placeholder="Skill-3">
+                                            <input type="text" id="Skill4" name="Skill4" onkeyup="BuildResume()"
+                                                placeholder="Skill-4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" onclick="addSkill()" id="add-button">Add Skill</button>
+                                    <button type="button" onclick="removeSkill()" id="remove-button">Remove
+                                        Skill</button>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="P-Button">Previous</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Achievment Section</h2>
+                        <div class="achiv-cont">
+                            <div class="Ainp-cont">
+                                <div class="cont">
+                                    <div class="acont" id="achiv-section">
+                                        <div class="rows">
+                                            <input type="text" id="Title" name="Title" class="Title"
+                                                onkeyup="BuildResume()" placeholder="Title">
+                                        </div>
+                                        <div class="rows">
+                                            <input type="text" id="Descrp" name="Descrp" class="Descrp"
+                                                onkeyup="BuildResume()" placeholder="Description">
+                                        </div>
+                                    </div>
+                                    <div class="rowb">
+                                        <button type="button" onclick="addAchievement()" id="add-button">Add
+                                            Achievement</button>
+                                        <button type="button" onclick="removeAchievement()" id="remove-button">Remove
+                                            Achievement</button>
+                                    </div>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="P-Button">Previous</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Education Section</h2>
+                        <div class="educ-cont">
+                            <div class="Einp-cont">
+                                <div class="cont">
+                                    <div class="econt" id="education-section">
+                                        <div class="rows">
+                                            <input type="text" id="EdSchool" name="EdSchool" onkeyup="BuildResume()"
+                                                placeholder="School/Collage">
+                                            <input type="date" id="EdSdate" name="EdSdate" oninput="BuildResume()"
+                                                placeholder="Start Date">
+                                            <input type="text" id="EdLoc" name="EdLoc" onkeyup="BuildResume()"
+                                                placeholder="Location">
+                                        </div>
+                                        <div class="rows">
+                                            <input type="text" id="EdDegree" name="EdDegree" onkeyup="BuildResume()"
+                                                placeholder="Degree">
+                                            <input type="date" id="EdEdate" name="EdEdate" oninput="BuildResume()"
+                                                placeholder="End Date">
+                                            <input type="text" id="EdDescrp" name="EdDescrp" onkeyup="BuildResume()"
+                                                placeholder="Description">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="P-Button">Previous</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Experiance Section</h2>
+                        <div class="exp-cont">
+                            <div class="Exinp-cont">
+                                <div class="cont">
+                                    <div class="excont" id="experiance-section">
+                                        <div class="rows">
+                                            <input type="text" id="ExTitle" name="ExTitle" onkeyup="BuildResume()"
+                                                placeholder="Title">
+                                            <input type="date" id="Sdate" name="Sdate" oninput="BuildResume()"
+                                                placeholder="Start Date">
+                                            <input type="text" id="Loc" name="Loc" onkeyup="BuildResume()"
+                                                placeholder="Location">
+                                        </div>
+                                        <div class="rows">
+                                            <input type="text" id="Comp" name="Comp" onkeyup="BuildResume()"
+                                                placeholder="Company">
+                                            <input type="date" id="Edate" name="Edate" oninput="BuildResume()"
+                                                placeholder="End Date">
+                                            <input type="text" id="EDescrp" name="EDescrp" onkeyup="BuildResume()"
+                                                placeholder="Description">
+                                        </div>
+                                    </div>
+                                    <div class="rowb">
+                                        <button type="button" onclick="addExperiance()" id="add-button">Add
+                                            Experiance</button>
+                                        <button type="button" onclick="removeExperiance()" id="remove-button">Remove
+                                            Experiance</button>
+                                    </div>
+
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="P-Button">Previous</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Project Section</h2>
+                        <div class="proj-cont">
+                            <div class="Pinp-cont">
+                                <div class="cont">
+                                    <div class="pcont" id="project-section">
+                                        <div class="pcont">
+                                            <div class="rows">
+                                                <input type="text" id="Pname" name="Pname" onkeyup="BuildResume()"
+                                                    placeholder="Project Name">
+                                            </div>
+                                            <div class="rows">
+                                                <input type="text" id="Plink" name="Plink" onkeyup="BuildResume()"
+                                                    placeholder="Project Link">
+                                            </div>
+                                        </div>
+                                        <div class="rows">
+                                            <input type="text" id="PDescrp" name="PDescrp" onkeyup="BuildResume()"
+                                                placeholder="Description">
+                                        </div>
+                                    </div>
+                                    <div class="rowb">
+                                        <button type="button" onclick="addProject()" id="add-button">Add
+                                            Project</button>
+                                        <button type="button" onclick="removeProject()" id="remove-button">Remove
+                                            Project</button>
+                                    </div>
+                                </div>
+                                <div class="rowb">
+                                    <button type="button" class="P-Button">Previous</button>
+                                    <button type="button" class="N-Button">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="F-Step">
+                        <h2>Editor Section</h2>
+                        <div class="final">
+                            <div id="editor-modal">
+                                <div class="em">
+                                    <button class="editor-btn" onclick="editSection(event,'About-Section')">About Edit</button>
+                                    <input type="text" class="editor-input" data-field="Name">
+                                </div>
+                                <div class="em">
+                                    <input type="text" class="editor-input" data-field="Bio">  
+                                    <input type="text" class="editor-input" data-field="Linkedin">
+                                </div>
+                                <div class="em">
+                                    <input type="text" class="editor-input" data-field="Phone">
+                                    <input type="text" class="editor-input" data-field="Email">
+                                </div>
+                                <div class="em">
+                                    <input type="text" class="editor-input" data-field="Address">
+                                    <input type="text" class="editor-input" data-field="Summary">
+                                </div>
+                                <div class="button-cont">
+                                    <button class="editor-btn" onclick="saveSection(event)">Save For About Section</button>
+                                </div>
+                            </div>
+                            <div id="editor-modal2">
+                                <div class="button-cont">
+                                    <button class="editor-btn" onclick="editSectionSecond(event,'Skill-Section')">Skill Edit</button>
+                                    <button class="editor-btn" onclick="editSectionSecond(event,'Achievement-Section')">Achievment Edit</button>
+                                    <button class="editor-btn" onclick="editSectionSecond(event,'Education-Section')">Education Edit</button>
+                                    <button class="editor-btn" onclick="editSectionSecond(event,'Experiance-Section')">Experiance Edit</button>
+                                    <button class="editor-btn" onclick="editSectionSecond(event,'Project-Section')">Project Edit</button>
+                                </div>
+                                <div class="em">
+                                    <textarea cols="50" rows="6" id="editor-input-Second"></textarea>
+                                </div>
+                            </div>
+                            <div class="button-cont">
+                                <button class="editor-btn" onclick="saveSectionSecond(event)">Save For Other Sections</button>
+                            </div>
+                            <button id="show-login" style="display: none;">Download CV</button>
+                            <div class="rowb">
+                                <button type="button" class="P-Button">Previous</button>
+                                <button id="mock-question" class="submit-btn">Download CV</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="rp">
+                <h2>preview Resume</h2>
+                <div class="print_area">
+                <div id="resume-preview">
+                    <div class="rp-cont">
+                        <div class="cont11">
+                            <div class="cp">
+                                <div id="About-Section">
+                                    <p class="editor-pB" data-field="Bio"><span id="previewBio"></span></p>
+                                    <p style="font-size: 25px; font-weight: 600;">Hey, I'm</p>
+                                    <p class="editor-pN" data-field="Name"><span id="previewName"></span></p>
+                                    <p class="editor-p" data-field="Summary"><span id="previewSummary"></span></p>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="cp">
+                                <p class="pr-p">Experiance</p>
+                                <p id="Experiance-Section" class="editor-p"><span id="previewExperience"></span></p>
+                                <p class="pr-p">Education</p>
+                                <p id="Education-Section" class="editor-p"><span id="previewEducation"></span></p>
+                                <p class="pr-p">Achievement</p>
+                                <p id="Achievement-Section" class="editor-p"><span id="previewAchievements"></span></p>
+                            </div>
+                        </div>
+                        <div class="cont22">
+                            <div class="V-line"></div>
+                        </div>
+                        <div class="cont33">
+                            <p class="pr-p">Contact</p>
+                            <div id="About-Section">
+                                <p class="editor-p" data-field="Phone"><span id="previewPhone"></span></p>
+                                <p class="editor-p" data-field="Email"><span id="previewEmail"></span></p>
+                                <p class="editor-p" data-field="Address"><span id="previewAddress"></span></p>
+                                <p class="editor-p" data-field="Linkedin"><span id="previewLinkdin"></span></p>
+                            </div>
+                            <p class="pr-p">Skill</p>
+                            <p id="Skill-Section" class="editor-p"><span id="previewSkills"></span></p>
+                            <p class="pr-p">Project</p>
+                            <p id="Project-Section" class="editor-p"><span id="previewProjects"></span></p>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="interview-block" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mock Interview Questions</h2>
+            <p id="question">questions...</p>
+            <div class="cont-Q">
+                <textarea id="answer" placeholder="Type answer here.."></textarea>
+                <button class="nextQ" id="forNextQ">Next Question</button>
+                <p id="progress"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container" id="main">
+        <div class="popup">
+            <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+            <div class="ontainer">
+                <h2 id="title">Sign Up</h2>
+                <div class="form">
+                    <input type="text" id="name" placeholder="Enter Username">
+                    <input type="email" id="emailLogin" placeholder="Email" >
+                    <input type="password" id="passwordLogin" placeholder="Password" >
+                    <button type="submit" id="Signup">SignUp</button>
+                    <button type="submit" id="login" style="display: none;">Login</button>
+                </div>
+                <p class="toggle" onclick="toggleForm()">Already have an account?  Login</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/progressBar.js"></script>
+    <script src="js/template1.js"></script>
+    <script src="js/loginPopup.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/mockinterview.js"></script>
+
+</body>
+
+</html>

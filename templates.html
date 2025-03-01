@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Rezel <span style="color:#4d63da;">Builds</span></a>
+        <nav class="navbar">
+            <ul>
+                <li><button type="submit" id="logout" class="btn">LogOut</button></li>
+                <li>
+                    <p class="profile"><img src="/images/user.png"></p>
+                </li>
+            </ul>
+        </nav>
+        <div id="menu" class="fas fa-bars"></div>
+    </header>
+
+    <section class="templates" id="template">
+
+        <h1 class="heading">Resume <span style="color:#515a61;">Templates</span></h1>
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Default Template</h3>
+                <div class="box-c">
+                    <img src="images/template1.png" alt="">
+                    <a href="template1.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Template</h3>
+                <div class="box-c">
+                    <img src="images/template2.png" alt="">
+                    <a href="template2.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Template</h3>
+                <div class="box-c">
+                    <img src="images/template3.png" alt="">
+                    <a href="template3.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Template</h3>
+                <div class="box-c">
+                    <img src="images/template4.png" alt="">
+                    <a href="template4.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Template</h3>
+                <div class="box-c">
+                    <img src="images/template5.png" alt="">
+                    <a href="template5.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Template</h3>
+                <div class="box-c">
+                    <img src="images/template6.png" alt="">
+                    <a href="template6.html"><button class="btn">Choose Template</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <h1 class="credit">Develop by <span>@ Rezel Builds..</span> | all rights reserved. </h1>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/navigationBar.js"></script>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAwcmVj-2hGhm7o-tCEi_rU1N-KDpgOJ5Q",
+            authDomain: "rezelbuilds-68bd1.firebaseapp.com",
+            databaseURL: "https://rezelbuilds-68bd1-default-rtdb.firebaseio.com",
+            projectId: "rezelbuilds-68bd1",
+            storageBucket: "rezelbuilds-68bd1.firebasestorage.app",
+            messagingSenderId: "369827627620",
+            appId: "1:369827627620:web:d550ab441fe304a2621571",
+            measurementId: "G-XLVZSG1CV8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        // const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+
+
+        const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                
+                const uid = user.uid;
+            
+            } else {
+                
+            }
+        });
+
+        logout.addEventListener('click', (e) => {
+
+            signOut(auth).then(() => {
+                alert('User LogOut!');
+                window.location.href = "index.html";
+
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
