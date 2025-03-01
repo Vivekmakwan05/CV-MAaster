@@ -120,7 +120,7 @@ header .fa-bars {
     width: 100%;
     display: flex;
     justify-content: center;
-    background: url("/images/backr1.jpg") no-repeat;
+    background: url("images/backr1.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -407,7 +407,7 @@ header .fa-bars {
         height: 300px;
     }
     .home{
-        background: url("/images/backr.jpg") no-repeat;
+        background: url("images/backr.jpg") no-repeat;
         background-size: contain;
         background-position: center;
         height: 40vh;
@@ -420,7 +420,7 @@ header .fa-bars {
 @media (max-width:480px) {
     .home{
         height: 40vh;
-        background: url("/images/backr.jpg") no-repeat;
+        background: url("images/backr.jpg") no-repeat;
         background-size: cover;
         background-position: center;
     }
