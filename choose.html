@@ -47,7 +47,9 @@
 
     .container {
         width: 100%;
-        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     button{
@@ -90,6 +92,10 @@
         font-weight: 400;
         text-transform: capitalize;
         text-align: center;
+        margin: 50px 0 30px 0;
+    }
+    img{
+        width: 250px;
     }
     @media (max-width:600px) {
     h2{
@@ -97,7 +103,7 @@
         padding: 0;
     }
     h3{
-        font-size: 20px;
+        font-size: 18px;
     }
     .boxes{
         width: 70%;
@@ -126,7 +132,9 @@
     </header>
 
     <div class="container">
-        <h3>Choose Options And Start Now..</h3><br><br>
+        <h3>Choose Options And Start Now..</h3>
+
+        <img src="images/choose.png" alt="">
 
         <div class="boxes">
             <div class="box1">
